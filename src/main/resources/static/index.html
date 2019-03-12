@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script
+    src="http://code.jquery.com/jquery-3.3.1.js"
+    integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+    crossorigin="anonymous"></script>
+
+    <form id="form1" method="POST" action="/greet1/">
+        <input id="say">
+        <input id="to">
+        <button onclick="Clicked();">SUBMIT</button>
+    </form>
+    <script>
+        function Clicked()
+        {
+            let say = $("#say").val();
+            let to = $("#to").val();
+            $("#form1").attr("action", "/greet1/"+say+"/"+to);
+        }
+    </script>
+</body>
+</html>
